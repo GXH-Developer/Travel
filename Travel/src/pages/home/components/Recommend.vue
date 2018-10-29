@@ -17,34 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        'id': '0',
-        'imgUrl': 'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2593844834,2702597776&fm=58&bpow=800&bpoh=575',
-        'title': '大连圣亚海洋世界',
-        'desc': '浪漫大连首站，浪漫的海洋主题乐园'
-      },
-      {
-        'id': '1',
-        'imgUrl': 'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2593844834,2702597776&fm=58&bpow=800&bpoh=575',
-        'title': '大连圣亚海洋世界',
-        'desc': '浪漫大连首站，浪漫的海洋主题乐园'
-      },
-      {
-        'id': '2',
-        'imgUrl': 'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2593844834,2702597776&fm=58&bpow=800&bpoh=575',
-        'title': '大连圣亚海洋世界',
-        'desc': '浪漫大连首站，浪漫的海洋主题乐园'
-      },
-      {
-        'id': '3',
-        'imgUrl': 'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2593844834,2702597776&fm=58&bpow=800&bpoh=575',
-        'title': '大连圣亚海洋世界',
-        'desc': '浪漫大连首站，浪漫的海洋主题乐园'
-      }
-      ]
-    }
+  props: {
+    recommendList: Array
   }
 }
 </script>
@@ -53,7 +27,6 @@ export default {
   @import '~styles/mixins.styl';
   .recommend-title
     font-size :.3rem
-    margin-top .2rem
     line-height :.8rem
     background :#eee
     text-indent :.2re

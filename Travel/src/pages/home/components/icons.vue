@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
         <swiper-slide v-for="(page,index) of pages" :key="index">
             <div class="icon" v-for="item of page" :key="item.id">
                 <div class="icon-img">
@@ -16,53 +16,14 @@
 <script>
 export default {
   name: 'icons',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      list: [{
-        'id': '0',
-        'title': '景点门票',
-        'imgUrl': 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM6csPlsMLV3o1Ee6K97Yst3lDuHcp1nwF6blBVTAVarSQ/0'
-      },
-      {
-        'id': '1',
-        'title': '滑雪季',
-        'imgUrl': 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM6csPlsMLV3o1Ee6K97Yst3lDuHcp1nwF6blBVTAVarSQ/0'
-      },
-      {
-        'id': '2',
-        'title': '泡温泉',
-        'imgUrl': 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM6csPlsMLV3o1Ee6K97Yst3lDuHcp1nwF6blBVTAVarSQ/0'
-      },
-      {
-        'id': '3',
-        'title': '国外游',
-        'imgUrl': 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM6csPlsMLV3o1Ee6K97Yst3lDuHcp1nwF6blBVTAVarSQ/0'
-      },
-      {
-        'id': '4',
-        'title': '动植园',
-        'imgUrl': 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM6csPlsMLV3o1Ee6K97Yst3lDuHcp1nwF6blBVTAVarSQ/0'
-      },
-      {
-        'id': '5',
-        'title': '一日游',
-        'imgUrl': 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM6csPlsMLV3o1Ee6K97Yst3lDuHcp1nwF6blBVTAVarSQ/0'
-      },
-      {
-        'id': '6',
-        'title': '国内游',
-        'imgUrl': 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM6csPlsMLV3o1Ee6K97Yst3lDuHcp1nwF6blBVTAVarSQ/0'
-      },
-      {
-        'id': '7',
-        'title': '国内游',
-        'imgUrl': 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM6csPlsMLV3o1Ee6K97Yst3lDuHcp1nwF6blBVTAVarSQ/0'
-      },
-      {
-        'id': '8',
-        'title': '国内游',
-        'imgUrl': 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM6csPlsMLV3o1Ee6K97Yst3lDuHcp1nwF6blBVTAVarSQ/0'
-      }]
+      swiperOption: {
+        autoplay: false
+      }
     }
   },
   computed: {

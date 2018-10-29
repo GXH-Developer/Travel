@@ -2,7 +2,7 @@
     <div>
         <div class="recommend-title">周末去哪</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
                <div class="item-img-wrapper">
                 <img class="item-img" :src="item.imgUrl" alt="">
                </div>
@@ -18,34 +18,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        'id': '0',
-        'imgUrl': 'https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=2bd81c777aec54e745ec1d1c89399bfd/18d8bc3eb13533fa886c0267a9d3fd1f40345ba4.jpg',
-        'title': '大连圣亚海洋世界',
-        'desc': '浪漫大连首站，浪漫的海洋主题乐园'
-      },
-      {
-        'id': '1',
-        'imgUrl': 'https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=2bd81c777aec54e745ec1d1c89399bfd/18d8bc3eb13533fa886c0267a9d3fd1f40345ba4.jpg',
-        'title': '大连圣亚海洋世界',
-        'desc': '浪漫大连首站，浪漫的海洋主题乐园'
-      },
-      {
-        'id': '2',
-        'imgUrl': 'https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=2bd81c777aec54e745ec1d1c89399bfd/18d8bc3eb13533fa886c0267a9d3fd1f40345ba4.jpg',
-        'title': '大连圣亚海洋世界',
-        'desc': '浪漫大连首站，浪漫的海洋主题乐园'
-      },
-      {
-        'id': '3',
-        'imgUrl': 'https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=2bd81c777aec54e745ec1d1c89399bfd/18d8bc3eb13533fa886c0267a9d3fd1f40345ba4.jpg',
-        'title': '大连圣亚海洋世界',
-        'desc': '浪漫大连首站，浪漫的海洋主题乐园'
-      }
-      ]
-    }
+  props: {
+    weekendList: Array
   }
 }
 </script>
@@ -54,7 +28,6 @@ export default {
   @import '~styles/mixins.styl';
   .recommend-title
     font-size :.3rem
-    margin-top .2rem
     line-height :.8rem
     background :#eee
     text-indent :.2re
