@@ -85,6 +85,7 @@ export default {
 @import '~styles/varibales.styl'
 @import '~styles/mixins.styl'
   .icons
+    margin-top :.2rem
     overflow :hidden
     height : 0
     padding-bottom :50%
