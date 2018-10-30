@@ -4,9 +4,11 @@
           <span class="iconfont back-icon">&#xe624;</span>
         </div>
         <div class="header-input">输入城市/景点/游玩主题</div>
-        <div class="header-right">{{this.city}}
-          <span class="arrow-icon"></span>
-        </div>
+        <router-link to="/city">
+          <div class="header-right">{{this.city}}
+            <span class="arrow-icon"></span>
+          </div>
+        </router-link>
     </div>
 </template>
 
@@ -23,13 +25,14 @@ export default {
   @import '~styles/varibales.styl';
   .header
     display: flex
-    height: .86rem
+    height: $header-height
     font-size .3rem
-    line-height: .86rem
+    line-height: $header-height
     background-color : $color-bg
     .header-left
       width: .64rem
       float: left
+      text-align :center
       color: #fff
       .back-icon
         font-size :.4rem
