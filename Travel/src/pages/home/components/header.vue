@@ -5,7 +5,7 @@
         </div>
         <div class="header-input">输入城市/景点/游玩主题</div>
         <router-link to="/city">
-          <div class="header-right">{{this.city}}
+          <div class="header-right">{{this.$store.state.city}}
             <span class="arrow-icon"></span>
           </div>
         </router-link>
@@ -14,10 +14,7 @@
 
 <script>
 export default {
-  name: 'HomeHeader',
-  props: {
-    'city': String
-  }
+  name: 'HomeHeader'
 }
 </script>
 
