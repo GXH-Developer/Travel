@@ -2,7 +2,7 @@
     <div class="header">
         城市选择
         <router-link to="/">
-        <div class="header-right">{{city}}
+        <div class="header-right">
             <span class="iconfont header-back">&#xe624;</span>
         </div>
         </router-link>
@@ -11,10 +11,7 @@
 
 <script>
 export default {
-  name: 'CityHeader',
-  props: {
-    city: String
-  }
+  name: 'CityHeader'
 }
 </script>
 

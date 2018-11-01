@@ -5,7 +5,7 @@
         </div>
         <div class="header-input">输入城市/景点/游玩主题</div>
         <router-link to="/city">
-          <div class="header-right">{{this.$store.state.city}}
+          <div class="header-right">{{city}}
             <span class="arrow-icon"></span>
           </div>
         </router-link>
@@ -13,8 +13,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  computed: {
+    ...mapState(['city'])
+  }
 }
 </script>
 
